@@ -1,0 +1,12 @@
+---
+
+roles:
+  - name: ansible-role-ocp4-bastion
+    src: https://github.com/dennis-perrone/ansible-role-ocp4-bastion
+    version: main
+  # - name: ansible-role-libvirt-vm
+  #   src: https://github.com/dennis-perrone/ansible-role-libvirt-vm
+  #   version: main
+
+collections:
+  - name: community.libvirt

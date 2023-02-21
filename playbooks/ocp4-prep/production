@@ -1,0 +1,4 @@
+# This is the production inventory file.
+
+[bastion_hosts]
+localhost ansible_connection=local

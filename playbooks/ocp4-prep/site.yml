@@ -1,0 +1,23 @@
+---
+
+- hosts: bastion_hosts
+
+  vars_files:
+    - defaults.yml
+
+  pre_tasks:
+    - name: Include playbook configuration.
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
+  roles:
+    - role: ansible-role-ocp4-bastion
+      tags: ['bastion_config']
+
+  # tasks:
+  #   - import_tasks: roles/ansible-role-ocp4-bastion/tasks/main.yml
+    # - import_tasks: roles/tasks/create_vm.yml
+    #   when: create_vm
+    #   tags: ['create_vm']
