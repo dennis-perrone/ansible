@@ -1,2 +1,6 @@
 # Ignore roles and install via ansible-galaxy
-**/roles/*
+#**/roles/*
+
+/playbooks/*/roles/*/*
+!/playbooks/*/roles/requirements.yml
+#**/roles/*
