@@ -1,0 +1,36 @@
+---
+
+repositories:
+  - repo_name: brave
+    description: Brave Browser
+    baseurl: https://brave-browser-rpm-release.s3.brave.com/$basearch
+    gpgcheck: true
+    gpgkey: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    enabled: true
+  - repo_name: vscode
+    description: Microsoft Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgcheck: true
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    enabled: true
+  - repo_name: kubernetes
+    description: kubernetes
+    baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+    gpgcheck: true
+    gpgkey: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+    enabled: true
+
+# rpm_fusion_repositories:
+#   - repo_name: https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm
+#   - repo_name: https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm
+
+rpm_fusion_keys:
+  - key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+  - key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+
+# rpmfusion_free_key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+rpmfusion_free_repo: https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm
+
+# rpmfusion_nonfree_key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+rpmfusion_nonfree_repo: https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm
+

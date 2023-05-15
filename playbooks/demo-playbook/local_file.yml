@@ -1,0 +1,11 @@
+---
+
+- name: Local file
+  hosts: all
+
+  tasks:
+    - name: Run report
+      delegate_to: localhost
+      ansible.builtin.template:
+        src: templates/report.j2
+        dest: /home/dperrone/development/ansible/playbooks/demo-playbook/output.txt

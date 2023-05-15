@@ -1,0 +1,8 @@
+Ansible Generated Report
+
+{% for host in groups['all'] %}
+Hostname:     {{ hostvars[host]['ansible_facts']['hostname'] }}
+IP Address:   {{ hostvars[host]['ansible_facts']['default_ipv4']['address'] }}
+Total Memory: {{ hostvars[host]['ansible_facts']['memtotal_mb'] }} MB
+=====
+{% endfor %}

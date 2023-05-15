@@ -1,0 +1,5 @@
+[dev]
+rocky-svr-01
+
+[prod]
+rocky-svr-02

@@ -1,0 +1,26 @@
+---
+
+users:
+  - username: user_one
+    group:
+      - ansible_group_01
+    job: manager
+  - username: user_two
+    group:
+      - ansible_group_01
+      - ansible_group_02
+    job: developer
+  - username: user_three
+    group:
+      - ansible_group_01
+    job: manager
+  - username: user_four
+    group:
+      - ansible_group_01
+      - ansible_group_02
+    job: developer
+  - username: user_five
+    group:
+      - ansible_group_01
+      - ansible_group_02
+    job: developer
