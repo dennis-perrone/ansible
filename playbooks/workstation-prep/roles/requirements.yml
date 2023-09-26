@@ -1,0 +1,14 @@
+---
+
+roles:
+  - name: ansible-role-setup-fedora-workstation
+    src: https://github.com/dennis-perrone/ansible-role-setup-fedora-workstation
+    version: main
+  - name: ansible-role-setup-general
+    src: https://github.com/dennis-perrone/ansible-role-setup-general
+    version: main
+
+
+collections:
+  - name: community.general
+#   - name: community.libvirt

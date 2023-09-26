@@ -1,32 +1,19 @@
 ---
-- name: Configure workstations
+- name: Configure new workstation
   hosts: workstation
-  become: true
-  vars_files:
-    - repositories.yml
 
   tasks:
 
-    # - name: Add and configure repositories
-    #   loop: "{{ repositories }}"
-    #   ansible.builtin.yum_repository:
-    #     name: "{{ item.repo_name }}"
-    #     description: "{{ item.description }}"
-    #     baseurl: "{{ item.baseurl }}"
-    #     gpgcheck: "{{ item.gpgcheck }}"
-    #     gpgkey: "{{ item.gpgkey }}"
+    - name: Configure Fedora Linux workstation
+      when: ansible_distribution == "Fedora"
+      ansible.builtin.import_role:
+        name: ansible-role-setup-fedora-workstation
 
-    - name: Install RPM Fusion keys
-      when: ansible_distribution == 'Fedora'
-      loop: "{{ rpm_fusion_keys }}"
-      ansible.builtin.rpm_key:
-        key: "{{ item.key }}"
-        state: present
+    - name: Configure general settings
+      ansible.builtin.import_role:
+        name: ansible-role-setup-general
 
-    - name: Configure RPM fusion repositories
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.dnf:
-        name:
-          - "{{ rpmfusion_free_repo }}"
-          - "{{ rpmfusion_nonfree_repo }}"
-        state: latest
+    # - name: Configure MBP
+    #   when: ansible_distribution == "MacOSX"
+    #   ansible.builtin.import_role:
+    #     name: ansible-role-setup-mbp

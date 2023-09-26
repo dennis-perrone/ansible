@@ -3,3 +3,6 @@ rocky-svr-01
 
 [prod]
 rocky-svr-02
+
+[windows]
+msft-svr-01
