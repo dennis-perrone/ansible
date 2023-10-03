@@ -9,9 +9,9 @@
       ansible.builtin.import_role:
         name: ansible-role-setup-fedora-workstation
 
-    - name: Configure general settings
-      ansible.builtin.import_role:
-        name: ansible-role-setup-general
+    # - name: Configure general settings
+    #   ansible.builtin.import_role:
+    #     name: ansible-role-setup-general
 
     # - name: Configure MBP
     #   when: ansible_distribution == "MacOSX"
