@@ -4,10 +4,15 @@
 
   tasks:
 
-    - name: Configure Fedora Linux workstation
+    # - name: Configure Fedora Linux workstation
+    #   when: ansible_distribution == "Fedora"
+    #   ansible.builtin.import_role:
+    #     name: ansible-role-setup-fedora-workstation
+    
+    - name: Configure Fedora Linux Silverblue
       when: ansible_distribution == "Fedora"
       ansible.builtin.import_role:
-        name: ansible-role-setup-fedora-workstation
+        name: ansible-role-setup-fedora-silverblue
 
     # - name: Configure general settings
     #   ansible.builtin.import_role:

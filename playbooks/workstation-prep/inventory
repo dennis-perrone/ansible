@@ -1,6 +1,6 @@
 [workstation]
 #localhost
-fedora-vm
+192.168.124.140
 
 #[servers]
 #rocky-svr-01
