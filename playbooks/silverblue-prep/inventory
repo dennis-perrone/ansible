@@ -1,5 +1,0 @@
-# This is the production inventory file.
-
-[workstation]
-#localhost
-192.168.124.185
